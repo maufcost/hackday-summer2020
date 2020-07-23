@@ -1,0 +1,285 @@
+/* General */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+body {
+    font-family: "Libre Franklin", Arial, sans-serif;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.main-btn {
+    padding: 16px 32px;
+    color: #fff;
+    background-color: #432564;
+    border-radius: 2px;
+    transition: 0.2s;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.main-btn:hover {
+    text-decoration: underline;
+    border-radius: 10px;
+}
+
+.std {
+    font-weight: bold;
+}
+
+.std:hover {
+    text-decoration: underline;
+}
+
+/* Navigation */
+nav {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    padding: 0 10px;
+}
+
+nav ul li:hover {
+    text-decoration: underline;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav #logo {
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+nav .dropdown-list {
+    display: none;
+    position: absolute;
+}
+
+nav .dropdown-list li {
+    padding: 10px;
+    background-color: #fff;
+}
+
+nav .dropdown-list li:hover {
+    background-color: #f0f0f0;
+    border-bottom: 2px solid #432564;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Learning Objects, Reinvented (Hero) */
+.hero {
+    height: 400px;
+    background: url("./images/banner.jpg") no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4em;
+}
+
+.hero p {
+    font-size: 1.5em;
+}
+
+/* Independent sections */
+.column-70 {
+    width: 69%;
+    display: inline-block;
+    padding: 40px 20px 40px 20px;
+    text-align: left;
+}
+
+.column-70 h2 {
+    font-size: 1.8em;
+    font-weight: bolder;
+}
+
+.column-30 {
+    width: 30%;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.block-title {
+    font-weight: bolder;
+    margin-top: 10px;
+}
+
+.block .block-paragraph {
+    font-size: 0.8em;
+    color: #53617e;
+    margin-top: 10px;
+}
+
+.blocks-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.blocks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 20px 0px;
+    background-color: #432564;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 150px;
+    border-radius: 2px;
+    padding: 10px;
+    transition: 0.2s;
+    background-color: #fff;
+    text-align: center;
+    margin: auto;
+}
+
+.block:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 10px;
+}
+
+#block-1 .block {
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #302041;
+    transition: 0.7s;
+}
+
+#block-2 .block {
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #302041;
+    transition: 0.7s;
+}
+
+#block-3 .block {
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #302041;
+    transition: 0.7s;
+}
+
+.ideas {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ideas h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.stats {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #432564;
+    color: #f0f0f0;
+}
+
+.stats h2 {
+    margin-top: 10px;
+}
+
+.stats p{
+    margin-top: 10px;
+}
+
+.purple-wrapper {
+    background-color: #432564;
+}
+
+/* Footer */
+footer {
+    height: 70;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: #efefef;
+}
+
+/* Media Queries */
+@media(max-width: 700px) {
+    .ideas {
+        flex-direction: column;
+    }
+
+    .column-70 {
+        width: 80%;
+        text-align: center;
+    }
+
+    .column-30 {
+        width: 80%;
+    }
+
+    .stats {
+        text-align: center;
+    }
+}
+
+@media(max-width: 900px) {
+    .hero h1 {
+        font-size: 3em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .blocks {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        text-align: center;
+    }
+}
